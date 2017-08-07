@@ -13,8 +13,7 @@ def look_up(phrase=None):
     resp = requests.get('http://3g.dict.cn/s.php?' +
                         urlencode({'q': phrase.encode('utf-8')}))
     resp.encoding = 'UTF-8'
-    # soup = BeautifulSoup(resp.text, 'lxml')
-    soup = BeautifulSoup(resp.text)
+    soup = BeautifulSoup(resp.text, 'lxml')
 
     info = {}
 
